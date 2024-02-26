@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+.container {
+  text-align: center;
+ }
+    </style>
+
+    <link href="../css/styles.css" rel="stylesheet" />
+    <title>Account</title>
+</head>
+<body>
+   <header><hr>
+    <h1 class="logo">S p a a r o w 🛖 O n l i n e</h1><hr><br>
+
+    <nav class="nav-buttons">
+        <a class="header-button" href="../index.html">H O M E</a>
+        <a class="header-button" href="../pages/BotCard.html">B U I L D</a>
+        <a class="header-button" href="../pages/Subscribe.html">- S U B -</a>
+        <a class="header-button" href="../pages/Auth.html">L O G I N</a>
+    </nav>
+    <br><hr>
+</header>
+  <h1 style="font-size: 200%; font-family: noteworthy; text-align: center;">S U C H - - - B O T S</h1><hr><br>
+
+<div class="container">
+    <h1 style="font-size: 200%; font-family: noteworthy;">CREATE ACCOUNT</h1>
+    <form action="/createAccount" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="repeat-password">Repeat Password:</label>
+        <input type="password" id="repeat-password" name="repeat-password" required>
+        <input type="submit" value="Create Account">
+    </form>
+</div><br><hr><br>
+<footer class="container footer">
+    <div class="FooterRow">
+        <img class="FooterImage" src=../img/x1.png" alt="footerimage" />
+        <img class="FooterImage" src=../img/x2.png" alt="footerimage" />
+        <img class="FooterImage" src=../img/x3.png" alt="footerimage" />
+        <img class="FooterImage" src=../img/x4.png" alt="footerimage" />
+        <img class="FooterImage" src=../img/x5.png" alt="footerimage" />
+        <img class="FooterImage" src=../img/x8.png" alt="footerimage" />
+    </div>
+    <hr>
+    <p>Thanks For Stopping By!</p>
+    <hr>
+</footer>
+<script src="./js/script.js"></script>
+<script>
+    function toggleLoginForm() {
+        var loginForm = document.getElementById('loginForm');
+        if (loginForm.style.display === 'none') {
+            loginForm.style.display = 'block';
+        } else {
+            loginForm.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
