@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaarow (A.NSFW.I) Online</title>
+    <div id="meta"></div>
+    <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $('#meta').load('../template/meta.html');
+            $('#freebots').load('../template/freebots.html');
+            $('#terms').load('../template/terms.html');
+            $('#header').load('../template/header.html');
+            $('#footer').load('../template/footer.html');
+        });
+    </script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            height: auto;
+            width: 100%;
+            padding: 10px 2px;
+            gap: 10px 10px;
+            box-sizing: border-box;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: red inset 1px;
+        }
+
+        .galleryinput {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: none;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .gallerybutton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            margin-top: 10px;
+            margin-left: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .gallerybutton:hover {
+            background-color: black;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const uploadButtons = document.querySelectorAll("gallerybutton");
+            uploadButtons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    const fileInput = button.previousElementSibling;
+                    const file = fileInput.files[0];
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    fetch("../data/upload.php", {
+                            method: "POST",
+                            body: formData
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                console.log("File uploaded successfully");
+                                // Optionally, you can trigger a gallery update here
+                            } else {
+                                console.error("Error uploading file");
+                            }
+                        })
+                        .catch(error => console.error("Error uploading file:", error));
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <input id="ajax" type="file" class="galleryinput">
+    <button id="gallerybutton" class="gallerybutton">Upload</button>
+    <div id="gallery"></div>
+    <script src="../js/gallery.js"></script>
+    <div id="footer"></div>
+</body>
+
+</html>

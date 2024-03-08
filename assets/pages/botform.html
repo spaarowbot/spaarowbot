@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chatbot Creation Form</title>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<!-- SEO Meta Tags -->     <link rel=" icon" href="https://www.spaarow.online/img/Logo.jpg">
+    <meta name="description" content="NSFW Silly Tavern character ai chatbot website">
+    <meta name="keywords" content="chatbot, NSFW, AI, Chat, ujb, jailbroken chatbot, silly tavern, cai, unrestricted, ai porn, ai generator, free, bots, chat, chatbase, chatbase.co, porn">
+    <meta name="author" content="Tyler Davis">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <link rel="canonical" href="https://www.spaarow.online/index.html"> <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Spaarow.online">
+    <meta property="og:description" content="Free Bots">
+    <meta property="og:image" content="https://www.spaarow.online/img/logo.jpg">
+    <meta property="og:url" content="https://www.spaarow.online">
+    <meta property="og:site_name" content="Spaarow.online">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">">
+    <meta name="keywords" content="chatbot, NSFW, AI, Chat, ujb, jailbroken chatbot, silly tavern, cai, unrestricted, ai porn, ai generator, free, bots, chat, chatbase, chatbase.co, porn">
+    <meta name="author" content="Tyler Davis">
+    <meta name="generator" content="http://chalarangelo.github.io/htmltemplategenerator/">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <!-- Libraries -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- jQuery (noConflict) boilerplate code -->
+    <script type="text/javascript">
+        jQuery.noConflict();
+        jQuery(function() {
+            console.log('jQuery(noConflict): Page loading complete!');
+        });
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <!-- AngularJS boilerplate code -->
+    <script type="text/javascript">
+        var app = angular.module('myApp', []);
+        app.controller('myController', [
+            '$scope',
+            function($scope) {
+                $scope.demoText = 'AngularJS: This is some demo text!';
+            }
+        ]);
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- External resources -->
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
+</head>
+
+<body classes="header nav h1 container form text-area label button footer link">
+    <!-- User-defined body -->
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spaarow (A.NSFW.I) Online</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/script.js"></script>
+        <script>
+            $(function() {
+                $('#meta').load('../template/meta.html');
+                $('#terms').load('../template/terms.html');
+                $('#header').load('../template/header.html');
+                $('#footer').load('../template/footer.html');
+            });
+        </script>
+        <div id="meta"></div>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <h1 class="title">Be Specific, Keep it Short</h1>
+        <div class="container">
+            <div class="Form">
+                <form action="../data/handlebotform.php" method="post" enctype="multipart/form-data">
+                    <label for="bot-name">Give Your Bot A Name:</label><br>
+                    <input type="text" id="bot-name" name="bot-name" required maxlength="25"><br><br>
+                    <label for="description">Now Instructions On How To Act:</label><br>
+                    <input type="text" id="description" name="description" required maxlength="1500"><br><br>
+                    <label for="appearance">What Does Your Bot Look Like?</label><br>
+                    <input type="text" id="appearance" name="appearance" required maxlength="750"><br><br>
+                    <label for="system-prompt">AI Instructions:</label><br>
+                    <input type="text" id="system-prompt" name="system-prompt" required maxlength="1500"><br><br>
+                    <label for="bot_photo">Upload A Photo (Max 1MB):</label><br>
+                    <input type="file" id="bot_photo" name="bot_photo" accept="image/*" required><br><br>
+                    <label for="public-private-toggle">Check Box if Public:</label><br>
+                    <input type="checkbox" id="public-private-toggle" name="public-private-toggle"><br><br>
+                    <label for="public-description">Public Description (1 to 2 Sentences):</label><br>
+                    <input type="text" id="public-description" name="public-description" maxlength="750"><br><br>
+                    <input id="ajax" type="submit" value="Create Bot"><br>
+                </form>
+            </div>
+        </div>
+        <div id="footer"></div>
+        <script src="../js/script.js"></script>
+    </body>
+
+    </html>
+    <!-- AngularJS HTML boilerplate code -->
+    <div ng-app="myApp">
+        <div ng-controller="myController">
+            <p>{{ demoText }}</p>
+        </div>
+    </div>
+    <!-- Generated template -->
+    <form autocomplete="off">
+        <div class="form-group">
+            <label for="register-email">Email</label>
+            <input type="email" class="form-control" id="register-email" placeholder="email">
+        </div>
+        <div class="form-group">
+            <label for="register-username">Username</label>
+            <input type="text" class="form-control" id="register-username" placeholder="username">
+        </div>
+        <div class="form-group">
+            <label for="register-password">Password</label>
+            <input type="password" class="form-control" id="register-password" placeholder="password">
+        </div>
+        <div class="form-group">
+            <label for="register-password-confirm">Confirm password</label>
+            <input type="password" class="form-control" id="register-password-confirm" placeholder="password">
+        </div>
+        <input type="submit" value="Register" class="btn btn-default">
+    </form>
+</body>
+
+</html>

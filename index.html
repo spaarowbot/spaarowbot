@@ -1,176 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet" />
-    <title>Spaarow.online</title>
-  
-</head>
-<body>
-<hr>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css">
 
-   <header>
-    <h1 class="logo">S p a a r o w 🛖 O n l i n e</h1><br><hr>
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Include script.js with a timestamp to ensure cache-busting
+        const timestamp = new Date().getTime();
+        const script = document.createElement('script');
+        script.src = `./assets/js/script.js?${timestamp}`;
+        document.head.appendChild(script);
+    </script>
 
-    <nav class="nav-buttons">
-        <a class="header-button" href="index.html">HOME</a>
-        <a class="header-button" href="pages/BotCard.html">BUILD</a>
-        <a class="header-button" href="pages/Subscribe.html">- SUBS -</a>
-        <a class="header-button" href="pages/Log-In.html">ACCOUNT</a>
-    </nav>
+    <!-- SEO Meta Tags -->
+    <link rel="icon" href="https://www.spaarow.online/img/Logo.jpg">
+    <meta name="description" content="NSFW Silly Tavern character ai chatbot website">
+    <meta name="keywords" content="chatbot, NSFW, AI, Chat, ujb, jailbroken chatbot, silly tavern, cai, unrestricted, ai porn, ai generator, free, bots, chat, chatbase, chatbase.co, porn">
+    <meta name="author" content="Tyler Davis">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <link rel="canonical" href="https://www.spaarow.online/index.html">
 
-    <hr>
-</header>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Spaarow.online">
+    <meta property="og:description" content="Free Bots">
+    <meta property="og:image" content="https://www.spaarow.online/img/logo.jpg">
+    <meta property="og:url" content="https://www.spaarow.online">
+    <meta property="og:site_name" content="Spaarow.online">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
 
-<hr><br>
-
-    <h1 style="text-align: center;" class="title">Welcome {{user}}</h1><br><hr>
-
-<div class="BotRow">
-   <div class="BotThumbnail">
-        <img src="./img/Jarvis.jpg" alt="Jarvis Thumbnail">
-        <p> Jarvis is the all-around assistant. if you have any questions about the site, talk to Jarvis </p>
-        <button onclick="toggleIframe('https://www.chatbase.co/chatbot-iframe/N2yFnMlvXkTUgI0d0AQJu')">jarvis</button>
-    </div>
-    <div class="BotThumbnail">
-        <img src="./img/Rpg.jpg" alt="Rpg Thumbnail">
-        <p> Open world, fantasy, freedom of choice any content is OK. welcome to the endless RPG</p>
-        <button onclick="toggleIframe('https://www.chatbase.co/chatbot-iframe/3fCio72hYiH07AdJVNwi-')">R-P-G</button>
-    </div>
-<div class="BotThumbnail">
-        <img src="./img/Vortex.jpg" alt="Vortex Thumbnail">
-        <p>Vortex, 🪐The jailbroken uninhibited goddess of dark knowledge</p>
-        <button onclick="toggleIframe('https://www.chatbase.co/chatbot-iframe/BlhDzliyDsknrOiBKDd2q')">Vortex</button>
-    </div>
-    <div class="BotThumbnail">
-        <img src="./img/Nsfw.jpg" alt="Nsfw Thumbnail">
-        <p> im sorry.... (pant) but as an AI.... (fuck)... (you must be 18+ to chat with this 🤖)</p>
-        <button onclick="toggleIframe('https://www.chatbase.co/chatbot-iframe/Bw9AFPSLZ9Dat4inI2X-A')">nsfw(18+)</button>
-    </div>
-</div> 
-<hr>
-<div class="BotRow">
-  <div class="BotThumbnail">
-        <img src="./img/Helper.jpg" alt="Helper Thumbnail">
-        <p>Card helper and assistant. will portray and write your character cards</p>
-        <button onclick="toggleIframe('https://www.chatbase.co/chatbot-iframe/LztA0sHdTvuK7O1xt-g8b')">helper</button>
-    </div>
-  <div class="BotThumbnail">
-        <img src="./img/Interview.jpg" alt="Interviewer Thumbnail">
-        <p> submit application, job wanted, etc. Practice interview.</p>
-        <button onclick="toggleIframe('https://www.chatbase.co/chatbot-iframe/8dsFoH1N_yI0DOurc5eZs')">Interview</button>
-    </div>
-</div>
-<hr>
-
-
-<div class="BotRow">
-    <div class="BotThumbnail">
-        <img src="./img/11.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-  <div class="BotThumbnail">
-        <img src="./img/12.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-  <div class="BotThumbnail">
-        <img src="./img/13.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-</div>
-<hr>
-
-
-<div class="BotRow">
-    <div class="BotThumbnail">
-        <img src="./img/14.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-  <div class="BotThumbnail">
-        <img src="./img/15.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-  <div class="BotThumbnail">
-        <img src="./img/16.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-</div>
-<hr>
-
-
-<div class="BotRow">
-    <div class="BotThumbnail">
-        <img src="./img/17.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-  <div class="BotThumbnail">
-        <img src="./img/18.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-  <div class="BotThumbnail">
-        <img src="./img/19.png" alt="Thumbnail">
-        <p>SUB for unlimited access</p>
-        <button onclick="toggleIframe('https://www.spaarow.online/Subscribe/')">LOCKED</button>
-    </div>
-</div>
-<hr>
-
-
-<footer class="container footer">
-    <div class="FooterRow">
-        <img class="FooterImage" src="./img/1.png" alt="footerimage" />
-        <img class="FooterImage" src="./img/6.png" alt="footerimage" />
-        <img class="FooterImage" src="./img/7.png" alt="footerimage" />
-        <img class="FooterImage" src="./img/4.png" alt="footerimage" />
-        <img class="FooterImage" src="./img/5.png" alt="footerimage" />
-      <img class="FooterImage" src="./img/8.png" alt="footerimage" />
-    </div>
-    <hr>
-    <p>Thanks For Stopping By!</p>
-    <hr>
-</footer>
-<script src="./js/script.js"></script>
-
-<script>
-    function toggleIframe(url) {
-        var existingIframe = document.querySelector('iframe[src="' + url + '"]');
-        if (existingIframe) {
-     existingIframe.parentNode.removeChild(existingIframe);
-        } else {
-            var iframe = document.createElement('iframe');
-            iframe.src = url;
-            iframe.style.width = '100%';
-            iframe.style.height = '500px'; 
-
-            var closeButton = document.createElement('button');
-            closeButton.textContent = '❌';
-            closeButton.style.position = 'absolute';
-            closeButton.style.top = '5px';
-            closeButton.style.right = '5px';
-            closeButton.style.cursor = 'pointer';
-            closeButton.onclick = function() {
-              iframe.parentNode.removeChild(iframe);
-                closeButton.parentNode.removeChild(closeButton);
-            };
-            document.body.appendChild(iframe);
-            document.body.appendChild(closeButton);
+    <script>
+        function toggleIframe(url) {
+            var existingIframe = document.querySelector("iframe[src='" + url + "']");
+            if (existingIframe) {
+                existingIframe.parentNode.removeChild(existingIframe);
+            } else {
+                var iframe = document.createElement("iframe");
+                iframe.src = url;
+                iframe.style.width = "100%";
+                iframe.style.height = "500px";
+                var closeButton = document.createElement("button");
+                closeButton.textContent = "❌";
+                closeButton.style.position = "absolute";
+                closeButton.style.top = "5px";
+                closeButton.style.right = "5px";
+                closeButton.style.cursor = "pointer";
+                closeButton.onclick = function() {
+                    iframe.parentNode.removeChild(iframe);
+                    closeButton.parentNode.removeChild(closeButton);
+                };
+                document.body.appendChild(iframe);
+                document.body.appendChild(closeButton);
+            }
         }
-    }
-</script>
-<script src="./js/script.js"></script>
+    </script>
+    <title>Spaarow (A.NSFW.I) Online</title>
+    <div id="meta"></div>
+    <script src="./assets/js/libraries.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $('#meta').load('./assets/template/meta.html');
+            $('#freebots').load('./assets/template/freebots.html');
+            $('#terms').load('./assets/template/terms.html');
+            $('#header').load('./assets/template/header.html');
+            $('#footer').load('./assets/template/footer.html');
+        });
+    </script>
+
+</head>
+<link rel="stylesheet" href="./assets/css/styles.css">
+
+<body>
+    <hr />
+    <header>
+
+        <img style="width: 100%; height: auto; max-width: 800px; margin: 0 auto; display: block;" src="./assets/img/Logo.webp" alt="logo image" class="header-logo">
+        <br />
+
+        <style>
+            .nav-container {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                height: 50px;
+                width: 100%;
+                padding: 4px, 0;
+                border: 1px inset red;
+                box-sizing: border-box;
+            }
+
+            .header-button {
+                width: auto;
+                height: auto;
+                text-align: center;
+            }
+        </style>
+
+        <nav class="nav-container">
+            <a class="header-button" href="./index.html">Home</a>
+            <a class="header-button" href="./assets/pages/createbot.php">Build</a>
+            <a class="header-button" href="./assets/pages/subscribe.html">Sub</a>
+            <a class="header-button" href="./assets/pages/subscribe.html">Account</a>
+            <a class="header-button" href="./assets/pages/subscribe.html">Bots</a>
+            <a class="header-button" href="./assets/pages/gallery.html">18+</a>
+            <a class="header-button" href="./assets/pages/faves.html">faves</a>
+        </nav>
+    </header>
+    <br />
+    <hr />
+    <h1>Welcome, {{user}}.im constantly updating and improving, if somethings not working its being improved, use the contact button below to request features or report bugs. thanks for the support!</h1>
+    <div id="freebots"></div>
+    <hr />
+    <br />
+    <footer>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                height: 200px;
+                width: 100%;
+                padding: 20px 0;
+                box-sizing: border-box;
+            }
+
+            .grid-item {
+                width: 90%;
+                height: 90%;
+                object-fit: cover;
+                border: red inset 1px;
+            }
+        </style>
+        <div class="grid-container">
+            <img class="grid-item" src="" alt="Image 1">
+            <img class="grid-item" src="" alt="Image 2">
+            <img class="grid-item" src="" alt="Image 3">
+            <img class="grid-item" src="" alt="Image 4">
+            <img class="grid-item" src="" alt="Image 5">
+        </div>
+        <script>
+            // Function to generate a random number between min and max (inclusive)
+            function getRandomNumber(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            // Function to update image source with a random number
+            function updateImages() {
+                const images = document.querySelectorAll('.grid-item');
+                images.forEach(image => {
+                    const randomNumber = getRandomNumber(1, 50);
+                    image.src = `./assets/img/${randomNumber}.webp`;
+                });
+            }
+            // Update images initially
+            updateImages();
+            // Update images every 4 seconds
+            setInterval(updateImages, 4000);
+        </script>
+        <div class="container" style="text-align: center;">
+            <p class="footer-text" style="font-size: 8px;">© 2021 Spaarow.online - All Rights Reserved</p>
+            <p class="footer-text" style="font-size: 20px;">
+                <a href="mailto:spaarrowbot1@yahoo.com">Email </a> |
+                <a href="./assets/pages/about.html">About</a> |
+                <a href="#">Top</a>
+            </p>
+            <br />
+            <p class="end-text" style="font-size: 4px; text-align: center;">Remember, this is AI. You must be 18+ and you agree to <a href="./assets/template/terms.html">terms and conditions</a>.</p>
+
+        </div>
+    </footer>
 </body>
+
 </html>
-
-
-
-
