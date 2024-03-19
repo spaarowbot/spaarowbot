@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaarow (A.NSFW.I) Online</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        function login() {
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('loginPassword').value;
+            // AJAX request to handle login
+            $.ajax({
+                type: 'POST',
+                url: '/auth/login', // Route to handle login in your server
+                data: {
+                    email: email,
+                    password: password
+                },
+                success: function(response) {
+                    if (response === 'success') {
+                        // Redirect to logged-in page or perform other actions
+                        alert('Login successful!');
+                    } else {
+                        // Handle login failure
+                        alert('Invalid email or password!');
+                    }
+                },
+                error: function() {
+                    // Handle AJAX error
+                    alert('An error occurred while processing your request.');
+                }
+            });
+        }
+    </script>
+    <div id="meta"></div>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div id="sidenav"></div>
+    <div id="header"></div <h1>Log in or Create an Account!</h1>
+    <br>
+    <hr>
+    <!-- Login Form -->
+    <div class="form">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" name="email" placeholder="Email" required><br>
+        <input type="password" id="loginPassword" name="password" placeholder="Password" required><br>
+        <button id="ajax" onclick="login()">Login</button>
+        <br>
+        <a href="./register.html" style="color: white; border: 1px green outset">Sign Up</a>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>

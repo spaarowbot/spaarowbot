@@ -1,0 +1,57 @@
+<hr />
+<br />
+<footer>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            height: 200px;
+            width: 100%;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .grid-item {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border: red inset 1px;
+        }
+    </style>
+    <div class="grid-container">
+        <img class="grid-item" src="" alt="Image 1">
+        <img class="grid-item" src="" alt="Image 2">
+        <img class="grid-item" src="" alt="Image 3">
+        <img class="grid-item" src="" alt="Image 4">
+        <img class="grid-item" src="" alt="Image 5">
+    </div>
+    <script>
+        // Function to generate a random number between min and max (inclusive)
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        // Function to update image source with a random number
+        function updateImages() {
+            const images = document.querySelectorAll('.grid-item');
+            images.forEach(image => {
+                const randomNumber = getRandomNumber(1, 50);
+                image.src = `../img/${randomNumber}.webp`;
+            });
+        }
+        // Update images initially
+        updateImages();
+        // Update images every 4 seconds
+        setInterval(updateImages, 4000);
+    </script>
+    <div class="container" style="text-align: center;">
+        <p class="footer-text" style="font-size: 8px;">© 2021 Spaarow.online - All Rights Reserved</p>
+        <p class="footer-text" style="font-size: 20px;">
+            <a href="mailto:spaarrowbot1@yahoo.com">Email </a> |
+            <a href="../template/about.html">About</a> |
+            <a href="#">Top</a>
+        </p>
+        <br />
+        <p class="end-text" style="font-size: 4px; text-align: center;">Remember, this is AI. You must be 18+ and you agree to <a href="../template/terms.html">terms and conditions</a>.</p>
+
+    </div>
+</footer>

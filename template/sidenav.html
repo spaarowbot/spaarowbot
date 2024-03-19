@@ -1,0 +1,83 @@
+<style>
+    body {
+        font-family: noteworthy;
+    }
+
+    #navbar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: darkblue;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    #navbar a {
+        padding: 5px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        padding-top: 40px;
+    }
+
+    #navbar a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #menuBtn {
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+    }
+
+    .navhead {
+        color: black;
+        font-size: 30;
+        font-family: noteworthy;
+        text-align: center;
+    }
+
+    .navimg {
+        height: 200px;
+        width: 100%;
+    }
+</style>
+
+<div id="navbar">
+    <img src="../img/sidenav.webp" class="navimg" alt="navimg" />
+    <h4 style="color: white;" class="navhead">such links!</h4>
+    <a href="#">Home</a>
+    <a href="https://spaarow.online">Spaarow{AI}Online</a>
+
+    <a href="https://goonhub.cam">GoonHub</a>
+
+    <a href="https://botly.site">AI{NSFW}IMG</a>
+
+    <a href="../pages/subscribe.html">Unlock Premium</a>
+
+    <a href="../pages/auth.html">Log in / Register</a>
+
+    <a href="mailto:spaarrowbot1@yahoo.com">Email Us</a>
+</div>
+
+<div id="menuBtn">&#9776;</div>
+
+<script>
+    document.getElementById("menuBtn").addEventListener("click", function() {
+        document.getElementById("navbar").style.width = "250px";
+    });
+    document.body.addEventListener("click", function(e) {
+        if (!e.target.matches('#navbar, #menuBtn')) {
+            document.getElementById("navbar").style.width = "0";
+        }
+    });
+</script>
