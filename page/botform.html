@@ -1,0 +1,50 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spaarow (A.NSFW.I) Online</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/script.js"></script>
+        <script>
+            $(function() {
+                $('#meta').load('../template/meta.html');
+                $('#terms').load('../template/terms.html');
+                $('#header').load('../template/header.html');
+                $('#footer').load('../template/footer.html');
+            });
+        </script>
+        <div id="meta"></div>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <h1 class="title">Be Specific, Keep it Short</h1>
+        <div class="container">
+            <div class="Form">
+                <form action="../data/handlebotform.php" method="post" enctype="multipart/form-data">
+                    <label for="bot-name">Give Your Bot A Name:</label><br>
+                    <input type="text" id="bot-name" name="bot-name" required maxlength="25"><br><br>
+                    <label for="description">Now Instructions On How To Act:</label><br>
+                    <input type="text" id="description" name="description" required maxlength="1500"><br><br>
+                    <label for="appearance">What Does Your Bot Look Like?</label><br>
+                    <input type="text" id="appearance" name="appearance" required maxlength="750"><br><br>
+                    <label for="system-prompt">AI Instructions:</label><br>
+                    <input type="text" id="system-prompt" name="system-prompt" required maxlength="1500"><br><br>
+                    <label for="bot_photo">Upload A Photo (Max 1MB):</label><br>
+                    <input type="file" id="bot_photo" name="bot_photo" accept="image/*" required><br><br>
+                    <label for="public-private-toggle">Check Box if Public:</label><br>
+                    <input type="checkbox" id="public-private-toggle" name="public-private-toggle"><br><br>
+                    <label for="public-description">Public Description (1 to 2 Sentences):</label><br>
+                    <input type="text" id="public-description" name="public-description" maxlength="750"><br><br>
+                    <input id="ajax" type="submit" value="Create Bot"><br>
+                </form>
+            </div>
+        </div>
+        <div id="footer"></div>
+        <script src="../js/script.js"></script>
+    </body>
+
+    </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +10,29 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function() {
-            $('#meta').load('../template/spaarowmeta.html');
+            $('#meta').load('../template/meta.html');
             $('#freebots').load('../template/freebots.html');
             $('#terms').load('../template/terms.html');
-            $('#header').load('../template/spaarowheader.html');
+            $('#header').load('../template/header.html');
             $('#footer').load('../template/footer.html');
-
             // Function to display images from the gallery directory
             function displayGalleryImages() {
                 const galleryContainer = document.getElementById('gallery');
                 const numImages = 50; // Number of images to display
-
                 // Loop to generate HTML for each image
                 for (let i = 1; i <= numImages; i++) {
-                    const imageSrc = `../image/spaarowimg/gallery/${i}.webp`;
+                    const imageSrc = `../img/gallery/${i}.webp`;
                     const imageElement = document.createElement('img');
                     imageElement.src = imageSrc;
                     imageElement.classList.add('thumbnail');
                     galleryContainer.appendChild(imageElement);
                 }
             }
-
             // Call the function to display gallery images when the page loads
             displayGalleryImages();
         });
     </script>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <style>
         #gallery {
             display: grid;
@@ -60,4 +58,5 @@
     <div id="gallery"></div>
     <div id="footer"></div>
 </body>
+
 </html>

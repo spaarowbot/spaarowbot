@@ -15,7 +15,7 @@
         // Include script.js with a timestamp to ensure cache-busting
         const timestamp = new Date().getTime();
         const script = document.createElement('script');
-        script.src = `./assets/js/script.js?${timestamp}`;
+        script.src = `script.js?${timestamp}`;
         document.head.appendChild(script);
     </script>
 
@@ -32,7 +32,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Spaarow.online">
     <meta property="og:description" content="Free Bots">
-    <meta property="og:image" content="https://www.spaarow.online/img/logo.jpg">
+    <meta property="og:image" content="https://www.spaarow.online/image/spaarowimg/logo.jpg">
     <meta property="og:url" content="https://www.spaarow.online">
     <meta property="og:site_name" content="Spaarow.online">
     <meta property="og:type" content="website">
@@ -65,36 +65,118 @@
     </script>
     <title>Spaarow (A.NSFW.I) Online</title>
     <div id="meta"></div>
-    <script src="./assets/js/libraries.js"></script>
+    <script src="./js/libraries.js"></script>
+    <script src="./js/date.1.0.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function() {
-            $('#meta').load('./assets/template/meta.html');
-            $('#freebots').load('./assets/template/freebots.html');
-            $('#terms').load('./assets/template/terms.html');
-            $('#header').load('./assets/template/header.html');
-            $('#footer').load('./assets/template/footer.html');
+            $('#meta').load('./template/meta.html');
+            $('#freebots').load('./template/freebots.html');
+            $('#terms').load('./template/terms.html');
+            $('#header').load('./template/header.html');
+            $('#footer').load('./template/footer.html');
         });
     </script>
 
 </head>
-<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="stylesheet" href="./css/styles.css">
 
 <body>
+    <style>
+        body {
+            font-family: noteworthy;
+        }
+
+        #navbar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: darkblue;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        #navbar a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 30px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        #navbar a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #menuBtn {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .navhead {
+            color: black;
+            font-size: 40;
+            font-family: times-new-roman;
+            text-align: center;
+        }
+
+        .navimg {
+            height: 100px;
+            width: 100%;
+        }
+    </style>
+
+    <div id="navbar">
+        <h4 class="navhead">such links!</h4>
+        <a href="#">Home</a>
+        <a href="https://spaarow.online">Spaarow{AI}Online</a>
+
+        <a href="https://goonhub.cam">GoonHub</a>
+
+        <a href="./page/subscribe.html">Unlock Premium</a>
+
+        <a href="./page/auth.html">Log in / Register</a>
+
+        <a href="mailto:spaarrowbot1@yahoo.com">Email Us</a>
+    </div>
+
+    <div id="menuBtn">&#9776;</div>
+
+    <script>
+        document.getElementById("menuBtn").addEventListener("click", function() {
+            document.getElementById("navbar").style.width = "250px";
+        });
+        document.body.addEventListener("click", function(e) {
+            if (!e.target.matches('#navbar, #menuBtn')) {
+                document.getElementById("navbar").style.width = "0";
+            }
+        });
+    </script>
     <hr />
     <header>
 
-        <img style="width: 100%; height: auto; max-width: 800px; margin: 0 auto; display: block;" src="./assets/img/Logo.webp" alt="logo image" class="header-logo">
+        <img style="width: 100%; height: auto; max-width: 800px; margin: 0 auto; display: block;" src="./img/logo.webp" alt="logo image" class="header-logo">
         <br />
 
         <style>
             .nav-container {
                 display: grid;
-                grid-template-columns: repeat(7, 1fr);
-                height: 50px;
+                grid-template-columns: repeat(6, 1fr);
+                height: 40px;
                 width: 100%;
                 padding: 4px, 0;
-                border: 1px inset red;
+                border: 2px outset red;
                 box-sizing: border-box;
             }
 
@@ -105,18 +187,18 @@
             }
         </style>
 
-        <nav class="nav-container">
-            <a class="header-button" href="./index.html">Home</a>
-            <a class="header-button" href="./assets/pages/createbot.php">Build</a>
-            <a class="header-button" href="./assets/pages/subscribe.html">Sub</a>
-            <a class="header-button" href="./assets/pages/subscribe.html">Account</a>
-            <a class="header-button" href="./assets/pages/subscribe.html">Bots</a>
-            <a class="header-button" href="./assets/pages/gallery.html">18+</a>
-            <a class="header-button" href="./assets/pages/faves.html">faves</a>
+        <nav style="font-family: noteworthy; font-size: 16px;" class="nav-container">
+            <a class="header-button" href="./index.html">•home•</a>
+            <a class="header-button" href="./page/botform.html">•build•</a>
+            <a class="header-button" href="./page/subscribe.html">•sub•</a>
+            <a class="header-button" href="./page/faves.html">alts</a>
+            <a class="header-button" href="./page/gallery.html">•18+•</a>
+            <a class="header-button" href="./page/account.php">•account•</a>
         </nav>
     </header>
     <br />
     <hr />
+
     <h1>Welcome, {{user}}.im constantly updating and improving, if somethings not working its being improved, use the contact button below to request features or report bugs. thanks for the support!</h1>
     <div id="freebots"></div>
     <hr />
@@ -156,7 +238,7 @@
                 const images = document.querySelectorAll('.grid-item');
                 images.forEach(image => {
                     const randomNumber = getRandomNumber(1, 50);
-                    image.src = `./assets/img/${randomNumber}.webp`;
+                    image.src = `./img/${randomNumber}.webp`;
                 });
             }
             // Update images initially
@@ -168,11 +250,11 @@
             <p class="footer-text" style="font-size: 8px;">© 2021 Spaarow.online - All Rights Reserved</p>
             <p class="footer-text" style="font-size: 20px;">
                 <a href="mailto:spaarrowbot1@yahoo.com">Email </a> |
-                <a href="./assets/pages/about.html">About</a> |
+                <a href="./template/about.html">About</a> |
                 <a href="#">Top</a>
             </p>
             <br />
-            <p class="end-text" style="font-size: 4px; text-align: center;">Remember, this is AI. You must be 18+ and you agree to <a href="./assets/template/terms.html">terms and conditions</a>.</p>
+            <p class="end-text" style="font-size: 4px; text-align: center;">Remember, this is AI. You must be 18+ and you agree to <a href="./template/terms.html">terms and conditions</a>.</p>
 
         </div>
     </footer>
